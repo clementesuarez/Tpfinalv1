@@ -1,0 +1,37 @@
+
+<hr>
+<hr>
+<div class="container p-4 h-100">
+  <div class="row h-75 d-flex align-items-center">
+    <div class="col-md-4 mx-auto">
+      <div class="card bg-dark">
+        <form action="/contacto" method="POST" class="card-body">
+
+          {{! Boton y formulario }}
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h1 class="text-light mb-3 h4">Haz tu pedido gratis</h1>
+            <button class="btn btn-primary">
+              Enviar
+            </button>
+          </div>
+          <label for="mail">Escribe un mail:</label>
+          <input
+            type="acorreo"
+            name="acorreo"
+            class="form-control bg-dark text-light mb-3"
+            placeholder="mail"
+            autofocus
+          />
+          <label for="descripcion">Write a description:</label>
+          <textarea
+            name="descripcion"
+            rows="2"
+            class="form-control bg-dark text-light mb-3"
+            placeholder="Description"
+          ></textarea>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</div>
