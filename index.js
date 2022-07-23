@@ -4,13 +4,15 @@
 const express = require('express')
 const app = express()
 require('dotenv').config();
-const port = process.env.PORT || 8080;
 const hbs=require('hbs');
 const mysql2= require('mysql2');
 const path=require('path');
 //const nodemailer=require('nodemailer');
 const Connection = require('mysql2');
-
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Our app is running on port ${ PORT }`);
+});
 
 //conecto la app a la base de datos//
 const conexion= mysql2.createConnection({
@@ -89,10 +91,7 @@ app.post('/contacto', (req, res) =>{
     }
 });
 
-app.listen(port, ()=>{
-    console.log(`servidor corriendo en el puerto ${port}`);
 
-});
 
 
 app.on('error', (error) => {
