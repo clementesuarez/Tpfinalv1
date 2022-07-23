@@ -3,17 +3,18 @@
 
 const express = require('express')
 const app = express()
+const PORT = process.env.PORT || 3000;
 require('dotenv').config();
 const hbs=require('hbs');
-const mysql2= require('mysql2');
+const mysql= require('mysql2');
 const path=require('path');
 //const nodemailer=require('nodemailer');
 const Connection = require('mysql2');
-const PORT = process.env.PORT || 3000;
+
 
 
 //conecto la app a la base de datos//
-const conexion= mysql2.createConnection({
+const conexion= mysql.createConnection({
     host:process.env.HOST,
     user:process.env.USER,
     password:process.env.PASSWORD,
