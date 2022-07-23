@@ -69,7 +69,7 @@ app.post('/contacto', (req, res) =>{
     console.log(acorreo);
     console.log(descripcion);
 
-/*    
+  
     //conectar();
     let data = {
         Mail: acorreo,
@@ -77,10 +77,10 @@ app.post('/contacto', (req, res) =>{
         
     }
     
-  */  
+  
    
     let sql = "INSERT INTO repost SET ?";
-/*
+
     let query = conexion.query(sql, data, (err, result)=>{
         if(err) throw err;       
          res.render('contacto', {titulo: 'COMPLETO EL FORMULARIO CON EXITO'})
@@ -88,7 +88,6 @@ app.post('/contacto', (req, res) =>{
     }
 });
 
-*/
 app.listen(port, ()=>{
     console.log(`servidor corriendo en el puerto ${port}`);
 
