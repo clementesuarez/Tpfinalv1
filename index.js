@@ -11,7 +11,7 @@ const path=require('path');
 //const nodemailer=require('nodemailer');
 const Connection = require('mysql2');
 
-/*
+
 //conecto la app a la base de datos//
 const conexion= mysql2.createConnection({
     host:process.env.HOST,
@@ -21,7 +21,7 @@ const conexion= mysql2.createConnection({
     database:process.env.DATABASE,
 })
 
-*/
+
 
 //configurar vista de la aplicacion
 //motores de plantillas
@@ -97,6 +97,5 @@ app.listen(port, ()=>{
 app.on('error', (error) => {
     console.log(`tenemos un error ${port}`);
 });
-
 
 
