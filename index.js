@@ -11,8 +11,8 @@ const path=require('path');
 //const nodemailer=require('nodemailer');
 const Connection = require('mysql2');
 
+/*
 //conecto la app a la base de datos//
-
 const conexion= mysql2.createConnection({
     host:process.env.HOST,
     user:process.env.USER,
@@ -21,6 +21,7 @@ const conexion= mysql2.createConnection({
     database:process.env.DATABASE,
 })
 
+*/
 
 //configurar vista de la aplicacion
 //motores de plantillas
@@ -43,12 +44,13 @@ app.use(express.urlencoded({extended: false}));
 //configuracion de pagina producto
 app.get('/producto', (req, res) =>{
     res.render('producto', {titulo:'Productos'})
-});
+}); 
 
 
 app.get('/contacto', (req, res) =>{
     res.render('contacto', {titulo: 'COMPLETE EL FORMULARIO DE CONTACTO'})
 });
+
 //verbo http para recibir datos
 app.post('/contacto', (req, res) =>{
     
@@ -67,13 +69,16 @@ app.post('/contacto', (req, res) =>{
     console.log(acorreo);
     console.log(descripcion);
 
+/*    
     //conectar();
     let data = {
         Mail: acorreo,
         descripcion: descripcion,
         
     }
-
+    
+  */  
+   
     let sql = "INSERT INTO repost SET ?";
 
     let query = conexion.query(sql, data, (err, result)=>{
@@ -83,13 +88,16 @@ app.post('/contacto', (req, res) =>{
     }
 });
 
+
 app.listen(port, ()=>{
     console.log(`servidor corriendo en el puerto ${port}`);
 
 });
 
+
 app.on('error', (error) => {
     console.log(`tenemos un error ${port}`);
 });
+
 
 
