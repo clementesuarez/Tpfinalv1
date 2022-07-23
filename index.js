@@ -32,7 +32,7 @@ app.set('views', path.join(__dirname, 'views')); //aca le indica donde estan las
 console.log(__dirname);
 hbs.registerPartials(path.join(__dirname, 'views/partials')); //le indico que tiene que buscar las plantillas parciales
 
-app.get('/index', (req, res) =>{
+app.get('/', (req, res) =>{
     res.render('index', {titulo:'pagina principal 12/07/2022'})
 });
 
