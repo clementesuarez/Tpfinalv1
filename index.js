@@ -6,7 +6,7 @@ const app = express()
 require('dotenv').config();
 const port = process.env.PORT || 8080;
 const hbs=require('hbs');
-const mysql= require('mysql2');
+const mysql2= require('mysql2');
 const path=require('path');
 //const nodemailer=require('nodemailer');
 const Connection = require('mysql2');
