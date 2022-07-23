@@ -1,0 +1,10 @@
+create table repost(
+Mail varchar(100),
+Muestragratis int,
+descripcion varchar(200)
+);
+
+------------------------
+
+mysql://beb5008e8376da:daa36c56@us-cdbr-east-06.cleardb.net/heroku_b7752ab34c7522d?reconnect=true
+
