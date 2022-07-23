@@ -10,9 +10,7 @@ const path=require('path');
 //const nodemailer=require('nodemailer');
 const Connection = require('mysql2');
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-    console.log(`Our app is running on port ${ PORT }`);
-});
+
 
 //conecto la app a la base de datos//
 const conexion= mysql2.createConnection({
@@ -91,8 +89,9 @@ app.post('/contacto', (req, res) =>{
     }
 });
 
-
-
+app.listen(PORT, () => {
+    console.log(`Our app is running on port ${ PORT }`);
+});
 
 app.on('error', (error) => {
     console.log(`tenemos un error ${port}`);
